@@ -1,0 +1,30 @@
+class Dog:
+      country = "世界"
+      voice = "国によって変わる"
+      
+      def __init__(self, name):
+            self.name = name
+      
+      def bark(self):
+            print(self.voice)
+            
+      @classmethod
+      def description(self):
+            print(F"{self.country}の犬の鳴き声は{self.voice}")
+            
+class English_Dog(Dog):
+      country = "英語圏"
+      #property（クラスメンバ変数）
+      voice = "bow!"
+      
+      #constructor（インスタンスメンバ変数）
+      def __init__(self, name = "Buddy"):
+            super().__init__(name)
+
+            
+class Japanese_Dog(Dog):
+      country = "日本"
+      voice = "ワン！"
+      
+      def __init__(self, name = "ポチ"):
+            super().__init__(name)
